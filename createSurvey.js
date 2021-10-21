@@ -5,8 +5,8 @@ const survey_options = document.getElementById("survey_options");
 const add_more_fields = document.getElementById("add_more_fields");
 const remove_fields = document.getElementById("remove_fields");
 
-const url = "http://localhost:3000/create_survey";
-const urlMail = "http://localhost:3000/get-users-email";
+const url = "https://nodejs-survey-app.herokuapp.com/create_survey";
+const urlMail = "https://nodejs-survey-app.herokuapp.com/get-users-email";
 
 add_more_fields.onclick = function () {
   const newField = document.createElement("input");

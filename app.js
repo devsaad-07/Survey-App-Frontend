@@ -10,12 +10,12 @@ const registerArr = document
 
 const homeURL = document.location.href;
 
-const url = "http://localhost:3000/sign-up";
-const url1 = function register() {
+const url = "https://nodejs-survey-app.herokuapp.com/sign-up";
+function register() {
   loginForm.style.left = "-400px";
   registerForm.style.left = "50px";
   btn.style.left = "110px";
-};
+}
 
 function login() {
   loginForm.style.left = "50px";
