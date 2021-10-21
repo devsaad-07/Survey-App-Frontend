@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- include font awesome -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h1>Create Survey</h1>
+    <div class="wrapper">
+      <div id="survey_options">
+        <input
+          type="text"
+          name="survey_options[]"
+          class="survey_options"
+          size="50"
+          placeholder="Enter Field"
+        />
+      </div>
+      <div class="controls">
+        <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add More</a>
+        <a href="#" id="remove_fields"
+          ><i class="fa fa-plus"></i>Remove Field</a
+        >
+      </div>
+      <button class="submit-button">Submit Form</button>
+    </div>
+    <script src="createSurvey.js"></script>
+  </body>
+</html>
