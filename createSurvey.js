@@ -57,7 +57,7 @@ function sendMail(data) {
       "Content-Type": "application/json",
     },
   })
-    .then((res) => res.json())
+    .then((res) => res.text())
     .then((data) => {
       console.log(data);
     })
