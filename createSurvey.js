@@ -54,7 +54,7 @@ function getSurveyID(data) {}
 function sendMail(data) {
   fetch(urlMail, {
     method: "POST",
-    body: JSON.stringify(data),
+    body: JSON.stringify({ id: data }),
     headers: {
       "Content-Type": "application/json",
     },
