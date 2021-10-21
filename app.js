@@ -23,6 +23,16 @@ function login() {
   btn.style.left = "0px";
 }
 
+function ValidateEmail(input) {
+  var validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (input.match(validRegex)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 loginButton.addEventListener("click", function () {
   const uid = firebase
     .auth()
@@ -56,18 +66,21 @@ registerButton.addEventListener("click", function () {
     gender: registerArr[3].value,
     age: registerArr[4].value,
   };
-
-  fetch(url, {
-    method: "POST",
-    body: JSON.stringify(user),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-      alert("Registered Successfully, Log in now!");
+  if (!ValidateEmail(user.email)) {
+    alert("Enter valid email");
+  } else {
+    fetch(url, {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
-    .catch((error) => console.log("ERROR"));
+      .then((res) => res.json())
+      .then((data) => {
+        //console.log(data);
+        alert("Registered Successfully, Log in now!");
+      })
+      .catch((error) => console.log("ERROR"));
+  }
 });
