@@ -49,8 +49,6 @@ submitButton.addEventListener("click", function () {
     .catch((error) => console.log("ERROR"));
 });
 
-function getSurveyID(data) {}
-
 function sendMail(data) {
   fetch(urlMail, {
     method: "POST",
@@ -63,5 +61,5 @@ function sendMail(data) {
     .then((data) => {
       console.log(data);
     })
-    .catch((error) => console.log("ERROR"));
+    .catch((error) => console.log("ERROR", error));
 }
