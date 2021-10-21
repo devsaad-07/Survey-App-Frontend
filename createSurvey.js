@@ -6,7 +6,7 @@ const add_more_fields = document.getElementById("add_more_fields");
 const remove_fields = document.getElementById("remove_fields");
 
 const url = "https://nodejs-survey-app.herokuapp.com/create_survey";
-const urlMail = "https://nodejs-survey-app.herokuapp.com/get-users-email";
+const urlMail = "https://nodejs-survey-app.herokuapp.com/send-email";
 
 add_more_fields.onclick = function () {
   const newField = document.createElement("input");
