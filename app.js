@@ -62,7 +62,7 @@ registerButton.addEventListener("click", function () {
   })
     .then((res) => res.json())
     .then((data) => {
-      //console.log(data);
+      console.log(data);
       alert("Registered Successfully, Log in now!");
     })
     .catch((error) => console.log("ERROR"));
