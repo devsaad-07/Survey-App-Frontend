@@ -80,7 +80,7 @@ body {
   left: 450px;
 }
 
-input[type="text"] {
+input {
   padding: 10px;
   margin: 10px auto;
   display: block;
@@ -91,7 +91,7 @@ input[type="text"] {
   color: black;
 }
 
-input[type="text"]:focus {
+input:focus {
   outline: none;
 }
 
