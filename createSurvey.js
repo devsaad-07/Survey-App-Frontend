@@ -41,8 +41,9 @@ submitButton.addEventListener("click", function () {
   })
     .then((res) => res.json())
     .then((data) => {
-      const surveyid = data.split("/")[-1];
-      console.log(data, surveyid);
+      const dataSeperated = data.split("/");
+      const surveyid = dataSeperated[dataSeperated.length - 1];
+      console.log(dataSeperated, surveyid);
       sendMail(surveyid);
       alert("Survey Added!");
     })
