@@ -42,7 +42,7 @@ getSurvey().then((survey) => {
 
 submitButton.addEventListener("click", function () {
   const inputElements = survey_options.querySelectorAll("input");
-  console.log("print");
+  //console.log("print");
   for (const [key, field] of inputElements.entries()) {
     if (field.value) answer[key] = field.value;
   }

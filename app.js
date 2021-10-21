@@ -29,7 +29,7 @@ loginButton.addEventListener("click", function () {
     .signInWithEmailAndPassword(loginArr[0].value, loginArr[1].value)
     .then((userCredential) => {
       console.log("signed in");
-      console.log(userCredential.user);
+      //console.log(userCredential.user);
       sessionStorage.setItem("uid", userCredential.user.uid);
       const urlobj = new URL(homeURL);
 
@@ -41,7 +41,7 @@ loginButton.addEventListener("click", function () {
       }
     })
     .catch((error) => {
-      console.log("Wrong Email or Password!");
+      alert("Wrong Email or Password!");
     });
 });
 
@@ -62,7 +62,7 @@ registerButton.addEventListener("click", function () {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      //console.log(data);
       alert("Registered Successfully, Log in now!");
     })
     .catch((error) => console.log("ERROR"));
