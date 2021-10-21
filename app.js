@@ -46,6 +46,9 @@ loginButton.addEventListener("click", function () {
 });
 
 registerButton.addEventListener("click", function () {
+  if (registerArr[2].value.length <= 6) {
+    alert("Password length should be greater than 6 characters");
+  }
   const user = {
     name: registerArr[0].value,
     email: registerArr[1].value,
@@ -53,6 +56,7 @@ registerButton.addEventListener("click", function () {
     gender: registerArr[3].value,
     age: registerArr[4].value,
   };
+
   fetch(url, {
     method: "POST",
     body: JSON.stringify(user),
